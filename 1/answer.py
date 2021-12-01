@@ -6,11 +6,8 @@ with open("input.txt", "r") as fp:
 
 res = 0
 
-for i, elem in enumerate(input):
-    if i > 0 and int(input[i-1]) < int(input[i]):
+for i in range(1, len(input)):
+    if int(input[i-1]) < int(input[i]):
         res += 1
 
 print("Result : " + str(res))
-
-for i in range(0,1):
-    print(i)

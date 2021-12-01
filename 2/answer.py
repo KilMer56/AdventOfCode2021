@@ -4,22 +4,17 @@
 with open("input.txt", "r") as fp:
     input = fp.readlines()
 
-sums = []
-
-for i, elem in enumerate(input):
-    if i+3 <= len(input):
-        sums.append(int(elem))
-
-    for j in range(0, min(i,2)):
-        k = i-1-j
-
-        if k < len(sums):
-            sums[k] += int(elem)
-
 res = 0
 
-for i, elem in enumerate(sums):
-    if i > 0 and sums[i-1] < sums[i]:
+for i in range(len(input)-3):
+    sum1 = 0
+    sum2 = 0
+
+    for j in range(3):
+        sum1 += int(input[i+j])
+        sum2 += int(input[i+j+1])
+
+    if sum1 < sum2:
         res += 1
 
 print("Result : " + str(res))
