@@ -2,7 +2,7 @@
 # Author : Killian Mer
 
 with open("input.txt", "r") as fp:
-    input = fp.readlines()
+    input = fp.read().splitlines()
 
 res = 0
 
