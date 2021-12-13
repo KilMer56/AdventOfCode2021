@@ -1,4 +1,4 @@
-# Advent of code Year 2021 Star 5
+# Advent of code Year 2021 Star 6
 # Author : Killian Mer
 
 with open("input.txt", "r") as fp:
@@ -19,7 +19,7 @@ def get_metric(i, elements, isOxygen):
     
     i += 1
 
-    if i == 1:
+    if i == 1: # If it is the beginning
         if len(a) >= len(b):
             return get_metric(i, a, True) * get_metric(i, b, False)
         else :

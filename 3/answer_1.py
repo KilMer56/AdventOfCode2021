@@ -9,7 +9,7 @@ epsilon = ""
 
 length = len(input)
 
-for i in range(len(str(input[0]))):
+for i in range(len(input[0])):
     count = 0
 
     for j in range(length):
